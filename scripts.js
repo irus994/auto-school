@@ -12,6 +12,9 @@ const formPopup = popupFormBlock.ownerDocument.querySelector('.form--popup');
 const closeMessageButton = successMessage.querySelector('.success-message__close-button');
 const answerButtons = document.querySelectorAll('.faq__button');
 const addressSlider = document.querySelector('.slider');
+const sliderAddressButtons = document.querySelectorAll('.change-address__button--map');
+const changeAddressButtons = document.querySelectorAll('.change-address__button');
+const addressLists = document.querySelectorAll('.change-address__list');
 
 // Табы с адресами
 
@@ -61,11 +64,6 @@ showAnswerToggle()
 
 // Открытие выпадающего списка адресов
 
-const changeAddressButtons = document.querySelectorAll('.change-address__button');
-const addressLists = document.querySelectorAll('.change-address__list');
-
-console.log(addressLists)
-
 const showAddressListToddle = () => {
     for (let i = 0; i < changeAddressButtons.length; i++) {
         changeAddressButtons[i].addEventListener('click', () => {
@@ -80,7 +78,7 @@ const showAddressListToddle = () => {
 
 showAddressListToddle();
 
-// Всплытие окна с формлй, кнопка записаться/оставить заявку
+// Всплытие окна с формой, кнопка записаться/оставить заявку
 
 const openPopupForm = () => {
     for (let i = 0; i < buttons.length; i++) {
@@ -92,7 +90,10 @@ const openPopupForm = () => {
         })
     }
 };
+
 openPopupForm();
+
+// Закрытие блока с формой
 
 const closePopupBlock = () => {
     popupFormBackground.addEventListener('click', () => {
@@ -119,7 +120,7 @@ const closePopupBlock = () => {
 closePopupBlock();
 
 
-// Сообщение об успешной отправке
+// Открытие сообщеняе об успешной отправке
 
 const openSuccessMessage = () => {
     for (let i = 0; i < submitForms.length; i++) {
@@ -145,8 +146,6 @@ closeMessageButton.addEventListener('click', () => {
 })
 
 // Открытие слайдера с фотогравиями входов
-
-const sliderAddressButtons = document.querySelectorAll('.change-address__button--map');
 
 const openAddressSlider = () => {
     for (let i = 0; i < sliderAddressButtons.length; i++) {
@@ -177,21 +176,18 @@ var marker = L.marker([60.05102, 30.38248], {
 }).addTo(map);
 
 
+// swiper слайдер (простой)
+
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
+
     direction: 'vertical',
     loop: true,
 
-    // If we need pagination
-
-
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
-
 });
+
+
 

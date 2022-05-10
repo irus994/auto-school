@@ -16,7 +16,7 @@
             crossorigin=""></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <body class="body">
-    <div class="popup-block">
+    <div class="popup-block visually-hidden">
         <form class="form form--popup" action="#" method="post">
             <p class="form__header">Оставьте свои контактные данные</p>
             <ul class="form__list">
@@ -137,24 +137,24 @@
                     <div class="wrapper-header-instructors">
                         <h2 class="text-header text-header--white">Наши инструкторы</h2>
                     </div>
-                    <ul class="instructors__slider">
-                        <li class="instructors__item instructors__item--active">
-                            <img class="instructors__photo" src="/img/driver-1.jpg">
+                    <div class="instructors__slider swiper2">
+                        <div class="instructors__item instructors__item--active">
+                            <img class="instructors__photo" src="/img/driver-0-big-photo.jpg">
                             <div class="instructors__bio"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
-                        </li>
-                        <li class="instructors__item">
+                        </div>
+                        <div class="instructors__item swiper-slide2">
                             <img class="instructors__photo" src="/img/driver-1.jpg">
                             <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
-                        </li>
-                        <li class="instructors__item">
+                        </div>
+                        <div class="instructors__item swiper-slide2">
+                            <img class="instructors__photo" src="/img/driver-2.jpg">
+                            <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
+                        </div>
+                        <div class="instructors__item swiper-slide2">
                             <img class="instructors__photo" src="/img/driver-1.jpg">
                             <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
-                        </li>
-                        <li class="instructors__item">
-                            <img class="instructors__photo" src="/img/driver-1.jpg">
-                            <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="instructors__slider-control">
                     <div class="wrapper-pagination">
@@ -264,7 +264,7 @@
                 </ul>
                 <div class="privacy-policy">
                     <input class="privacy-policy__input" type="checkbox">
-                    <span class="privacy-policy__text">Я слгласен <a class="privacy-policy__link" href="#">с политикой конфиденциальности</a></span>
+                    <span class="privacy-policy__text">Я согласен <a class="privacy-policy__link" href="#">с политикой конфиденциальности</a></span>
                 </div>
                 <button class="button button--submit" type="submit"><p class="button__text">Отправить заявку</p></button>
             </form>
