@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+            integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+            crossorigin=""></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<body class="body">
+    <div class="popup-block">
+        <form class="form form--popup" action="#" method="post">
+            <p class="form__header">Оставьте свои контактные данные</p>
+            <ul class="form__list">
+                <li class="form__item">
+                    <label class="form__label visually-hidden" for="name-popup">Имя</label>
+                    <input class="form__input" type="text" id="name-popup" name="user_name" required placeholder="Имя">
+                </li>
+                <li>
+                    <label class="form__label visually-hidden" for="tel-popup">Номер телефона</label>
+                    <input class="form__input" type="tel" id="tel-popup" name="user_tel" required placeholder="Номер телефона">
+                </li>
+            </ul>
+            <div class="privacy-policy">
+                <input class="privacy-policy__input" type="checkbox" required>
+                <span class="privacy-policy__text">Я согласен <a class="privacy-policy__link" href="#">с политикой конфиденциальности</a></span>
+            </div>
+            <button class="button button--submit" type="submit"><p class="button__text">Отправить заявку</p></button>
+        </form>
+        <div class="success-message visually-hidden">
+            <button class="success-message__close-button" type="button"></button>
+            <div class="success-message__icon"></div>
+            <p class="success-message__header">Ваша заявка отправлена!</p>
+            <p>Специалисты свяжутся  c вами в ближайшее время и помогут в оформлении записи</p>
+        </div>
+        <div class="swiper slider visually-hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/address-1.png"></div>
+                <div class="swiper-slide"><img src="img/address-1.png"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="popup-form-background"></div>
+    </div>
+    <header class="header">
+        <div class="info">
+            <div class="logo">
+                <p class="logo__text">Логотип</p>
+            </div>
+            <div class="wrapper-contact-info">
+                <div class="change-address">
+                    <div class="wrapper-address-text-header">
+                        <p class="change-address__header">Выберите адрес</p>
+                        <button class="change-address__button"></button>
+                    </div>
+                    <ul class="change-address__list visually-hidden">
+                        <li class="change-address__item" value="1"><a class="change-address__link" href="#">Ул. Первая, 5–1</a></li>
+                        <li class="change-address__item" value="2"><a class="change-address__link" href="#">Ул. Вторая, 22–1</a></li>
+                        <li class="change-address__item" value="3"><a class="change-address__link" href="#">Ул. Третья, 119</a></li>
+                        <li class="change-address__item" value="4"><a class="change-address__link" href="#">Ул. Четвертая, 14</a></li>
+                        <li class="change-address__item" value="5"><a class="change-address__link" href="#">Пр. Пятый, 11–1</a></li>
+                    </ul>
+                </div>
+                <div class="email">
+                    <a class="email__link" href="mailto:info@asp.ru">info@asp.ru</a>
+                </div>
+                <div class="tel">
+                    <ul class="tel__list">
+                        <li class="tel__item"><a class="tel__link" href="tel:+79999999999">(999) 999–99–99</a></li>
+                        <li class="tel__item"><a class="tel__link" href="tel:+71111111111">(111) 111–11–11</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="button button--request"><p class="button__text">Заказать звонок</p></button>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Категории</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Филиалы</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Преподаватели</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Инструкторы</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Наш автопарк</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Наш автодром</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="school">
+            <div class="wrapper-school-content">
+                <h1 class="text-header">Автошкола<br> в Санкт-Петербурге</h1>
+                <p class="text">Проходите обучение как вам удобно — в группе выходного дня, по вечерам или онлайн</p>
+                <button class="button button--request"><p class="button__text">Записаться</p></button>
+            </div>
+            <div class="background-green-rectangle"></div>
+            <img class="school__img" src="img/main-auto-img.png" width="646" height="351">
+        </section>
+        <div class="moving-text-display">
+            <p class="moving-text-display__text"><span class="moving-text-display__text-element">Специальные предложения и акции</span> <span class="moving-text-display__text-element"> Специальные предложения и акции </span> <span class="moving-text-display__text-element"> Специальные предложения и акции </span></p>
+        </div>
+        <section class="addresses">
+            <div class="wrapper-header-addresses">
+                <h2 class="text-header">Наши филиалы</h2>
+            </div>
+            <div class="addresses__tab-block">
+                <div class="wrapper-button">
+                    <button class="addresses__button addresses__button--classes addresses__button--active"><p class="addresses__button-text">Учебные классы</p></button>
+                    <button class="addresses__button addresses__button--motordrom"><p class="addresses__button-text">Автодром</p></button>
+                </div>
+                <div class="wrapper-address-list">
+                    <ul class="addresses__list addresses__list--classes">
+                        <li class="addresses__item"><p class="addresses__text">Пр. Первый, 31–1</p></li>
+                        <li class="addresses__item"><p class="addresses__text">Ул. Вторая, 5–1</p></li>
+                        <li class="addresses__item"><p class="addresses__text">Пр. Третий, 11–1</p></li>
+                        <li class="addresses__item"><p class="addresses__text">Ул. Четвертая, 22–1</p></li>
+                    </ul>
+                    <ul class="addresses__list addresses__list--motordrom visually-hidden">
+                        <li class="addresses__item"><p class="addresses__text">Ул. Третья, д. 119</p></li>
+                        <li class="addresses__item"><p class="addresses__text">Ул. Четвертая, д. 14</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="instructors">
+            <div class="instructors__slider">
+                <div class="wrapper-instructors-slider">
+                    <div class="wrapper-header-instructors">
+                        <h2 class="text-header text-header--white">Наши инструкторы</h2>
+                    </div>
+                    <ul class="instructors__slider">
+                        <li class="instructors__item instructors__item--active">
+                            <img class="instructors__photo" src="/img/driver-1.jpg">
+                            <div class="instructors__bio"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
+                        </li>
+                        <li class="instructors__item">
+                            <img class="instructors__photo" src="/img/driver-1.jpg">
+                            <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
+                        </li>
+                        <li class="instructors__item">
+                            <img class="instructors__photo" src="/img/driver-1.jpg">
+                            <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
+                        </li>
+                        <li class="instructors__item">
+                            <img class="instructors__photo" src="/img/driver-1.jpg">
+                            <div class="instructors__bio visually-hidden"><p class="instructors__name">Любимов Игорь Юрьевич</p><p class="instructors__experience">Стаж вождения с 1996 г.</p><p class="instructors__experience"> Инструктор с 2002 г.</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="instructors__slider-control">
+                    <div class="wrapper-pagination">
+                        <p class="instructors__slider-pagination"><span class="instructors__slider-now">1</span> / 4</p>
+                        <div class="control-buttons">
+                            <button class="control-buttons__button control-buttons__button--front"></button>
+                            <button class="control-buttons__button control-buttons__button--back"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="instructors__text">Каждый инструктор имеет свидетельство, предоставляющее право на обучение вождению автотранспортными средствами. Все инструкторы проходят повышение квалификации по программе «Преподаватель автомобильной школы по обучению практике управления автотранспортным средством»</p>
+        </section>
+        <section class="faq">
+            <div class="wrapper-faq-content">
+                <div class="wrapper-header-faq">
+                    <h2 class="text-header text-header--white">Часто задаваемые вопросы</h2>
+                </div>
+                <img class="faq__img" src="img/orange-auto-img.png" width="674" height="340">
+            </div>
+            <div class="wrapper-fag-list">
+                <ul class="faq__list">
+                    <li class="faq__item">
+                        <button class="faq__button"></button>
+                        <p class="faq__question">Если прописка не в Санкт-Петербурге, могу ли я обучаться и сдавать экзамены в этом городе?</p>
+                        <p class="fag__answer visually-hidden">По новому закону для автошколы и ГИБДД не имеет значения прописка, обучаться и сдавать экзамены может любой россиянин. Немного другая ситуация с иностранными гражданами. Чтобы обучаться и сдавать экзамены в ГИБДД, вам потребуется временная регистрация в Санкт-Петербурге или Ленинградской области сроком не менее 6 месяцев.</p>
+                    </li>
+                    <li class="faq__item">
+                        <button class="faq__button"></button>
+                        <p class="faq__question">Какие документы нужны для поступления?</p>
+                        <p class="fag__answer visually-hidden">По новому закону для автошколы и ГИБДД не имеет значения прописка, обучаться и сдавать экзамены может любой россиянин. Немного другая ситуация с иностранными гражданами. Чтобы обучаться и сдавать экзамены в ГИБДД, вам потребуется временная регистрация в Санкт-Петербурге или Ленинградской области сроком не менее 6 месяцев.</p>
+                    </li>
+                    <li class="faq__item">
+                        <button class="faq__button"></button>
+                        <p class="faq__question">На каких автомобилях проходит обучение?</p>
+                        <p class="fag__answer visually-hidden">По новому закону для автошколы и ГИБДД не имеет значения прописка, обучаться и сдавать экзамены может любой россиянин. Немного другая ситуация с иностранными гражданами. Чтобы обучаться и сдавать экзамены в ГИБДД, вам потребуется временная регистрация в Санкт-Петербурге или Ленинградской области сроком не менее 6 месяцев.</p>
+                    </li>
+                    <li class="faq__item">
+                        <button class="faq__button"></button>
+                        <p class="faq__question">Можно ли заниматься теорией и практикой в разных филиалах?</p>
+                        <p class="fag__answer visually-hidden">По новому закону для автошколы и ГИБДД не имеет значения прописка, обучаться и сдавать экзамены может любой россиянин. Немного другая ситуация с иностранными гражданами. Чтобы обучаться и сдавать экзамены в ГИБДД, вам потребуется временная регистрация в Санкт-Петербурге или Ленинградской области сроком не менее 6 месяцев.</p>
+                    </li>
+                    <li class="faq__item">
+                        <button class="faq__button"></button>
+                        <p class="faq__question">C какого возраста я могу приступить к обучение и сдавать экзамен в ГИБДД на получение водительского удостоверения?</p>
+                        <p class="fag__answer visually-hidden">По новому закону для автошколы и ГИБДД не имеет значения прописка, обучаться и сдавать экзамены может любой россиянин. Немного другая ситуация с иностранными гражданами. Чтобы обучаться и сдавать экзамены в ГИБДД, вам потребуется временная регистрация в Санкт-Петербурге или Ленинградской области сроком не менее 6 месяцев.</p>
+                    </li>
+                </ul>
+                <div class="control-buttons">
+                    <button class="control-buttons__button control-buttons__button--front"></button>
+                    <button class="control-buttons__button control-buttons__button--back"></button>
+                </div>
+            </div>
+        </section>
+        <section class="how-to-find">
+            <h2 class="text-header">Как нас найти</h2>
+            <div class="wrapper-map">
+                <div class="change-address change-address--map">
+                    <div class="wrapper-address-text-header">
+                        <p class="change-address__header">Калининский район</p>
+                        <button class="change-address__button"></button>
+                    </div>
+                    <ul class="change-address__list change-address__list--map visually-hidden">
+                        <li class="change-address__item" value="1"><a class="change-address__link" href="#">Невский район</a></li>
+                        <li class="change-address__item" value="2"><a class="change-address__link" href="#">Выборгский район</a></li>
+                        <li class="change-address__item" value="3"><a class="change-address__link" href="#">Приморский район</a></li>
+                    </ul>
+                </div>
+                <div id="map"></div>
+                <div class="map-popup">
+                <p class="map-popup__header">Учебные классы</p>
+                <ul class="map-popup__address-list">
+                    <li class="map-popup__address-item">
+                        <p class="map-popup__address"><a class="map-popup__address_link" href="#">Пр. Культуры, д. 31, к.1</a></p>
+                        <p class="map-popup__timetable">С 12:30 до 19:00 по будням</p>
+                        <span class="map-popup__button-subscribe">План входа</span>
+                        <button class="change-address__button change-address__button--map" type="button"></button>
+                    </li>
+                    <li class="map-popup__address-item">
+                        <p class="map-popup__address"><a class="map-popup__address_link" href="#">Ул. Ушинского, д. 5, к.1</a></p>
+                        <p class="map-popup__timetable">С 12:30 до 19:30 по будням</p>
+                        <span class="map-popup__button-subscribe">План входа</span>
+                        <button class="change-address__button change-address__button--map" type="button"></button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="wrapper-feedback-content">
+                <div class="wrapper-header-feedback">
+                    <h2 class="text-header text-header--white">Свяжитесь с нами!</h2>
+                    <img class="feedback__img" src="img/white-auto-img.png">
+                </div>
+            </div>
+            <form class="form" action="#" method="post">
+                <p class="form__header">Оставьте свои контактные данные</p>
+                <ul class="form__list">
+                    <li class="form__item">
+                        <label class="form__label visually-hidden" for="name">Имя</label>
+                        <input class="form__input" type="text" id="name" name="user_name" placeholder="Имя" required>
+                    </li>
+                    <li>
+                        <label class="form__label visually-hidden" for="tel">Номер телефона</label>
+                        <input class="form__input" type="tel" id="tel" name="user_tel" required placeholder="Номер телефона">
+                    </li>
+                </ul>
+                <div class="privacy-policy">
+                    <input class="privacy-policy__input" type="checkbox">
+                    <span class="privacy-policy__text">Я слгласен <a class="privacy-policy__link" href="#">с политикой конфиденциальности</a></span>
+                </div>
+                <button class="button button--submit" type="submit"><p class="button__text">Отправить заявку</p></button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="footer__nav">
+            <div class="wrapper-footer-nav">
+                <div class="footer__logo">
+                    <p class="footer__logo-text">Логотип</p>
+                </div>
+                <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Категории</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Филиалы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Преподаватели</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Инструкторы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Наш автопарк</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Наш автодром</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Отзывы</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Контакты</a></li>
+            </ul>
+            </div>
+        </nav>
+        <div class="footer__contact">
+            <span class="footer__copyright">© 2022 Все права защищены</span>
+            <div class="tel">
+                <ul class="footer__tel">
+                    <li class="footer__tel-item"><a class="footer__tel-link" href="tel:+71111111111">(111) 111–11–11</a></li>
+                    <li class="footer__tel-item"><a class="footer__tel-link" href="tel:+79999999999">(999) 999–99–99</a></li>
+                </ul>
+            </div>
+            <div class="footer__email">
+                <a class="footer__email-link" href="mailto:info@asp.ru">info@asp.ru</a>
+            </div>
+            <ul class="social-link">
+                <li class="social-link__item">
+                    <a class="social-link__link" href="#">
+                        <img src="img/instagram-icon.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li class="social-link__item">
+                    <a class="social-link__link" href="#">
+                        <img src="img/vk-icon.svg" alt="VK">
+                    </a>
+                </li>
+                <li class="social-link__item">
+                    <a class="social-link__link" href="#">
+                        <img src="img/fb-icon.svg" alt="Facebook">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</head>
+</body>
+<div class="hidden"></div>
+</html>
